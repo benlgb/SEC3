@@ -54,4 +54,8 @@ $(function() {
 
     logoGif.src = "../static/img/LOGO.gif";
     logo.src = "../static/img/logo.jpg";
+
+    $(".menuText").click(function(){
+        $("#leaders").slideToggle(300);
+    })
 });
