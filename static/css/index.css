@@ -9,12 +9,13 @@ body {
     height: 100%;
 }
 
-body > div {
-    width: 100%;
-    height: 100%;
+.content{
+	height: 100%;
 }
 
 .index {
+    width: 100%;
+    height: 100%;
     background-color: #c73232;
     color: white;
 }
@@ -31,11 +32,14 @@ body > div {
     font-family: Arial;
     font-size: 20px;
     margin-right: 40px;
-    margin-top: 24px;
+    margin-top: 25px;
+    margin-left: 15px;
 }
 
 .index .menu img {
     width: 23px;
+    position: relative;
+    top: 1px;
 }
 
 .index .logo {
@@ -49,4 +53,127 @@ body > div {
     background-image: url(../img/part2bg.jpg);
     background-size: auto 100%;
     background-position: center;
+    font-size: 0px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.part2 a{
+	-webkit-tap-highlight-color: rgba(255,0,0,0);
+}
+
+.part2 img{
+	width: 250px;
+	height: 330px;
+	position: relative;
+	top: 50%;
+	margin-top: -165px;
+}
+
+.part2 .info{
+	margin-right: 200px;
+}
+
+.part3, .part3 > div{
+	height: 100%;
+	position: relative;
+}
+
+.part3 .picture{
+	float: left;
+	width: 50%;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.part3 .picture1{
+	background-image: url(../img/110699420055569554.jpg);
+}
+
+.part3 .picture2{
+	background-image: url(../img/674528783993979927.jpg);
+}
+
+.part3 .picture .slider{
+	width: 100%;
+	height: 100%;
+	background-color: #c73232;
+	opacity: 0.3;
+	position: absolute;
+	top: 0px;
+	z-index: 0;
+}
+
+.part3 .picture h2{
+	position: absolute;
+	z-index: 1;
+	color: white;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 40px;
+}
+
+.part3 .picture1 h2{
+	float: left;
+	top: 40px;
+	left: 40px;
+}
+
+.part3 .picture2 h2{
+	float: right;
+	bottom: 40px;
+	right: 40px;
+}
+
+.part3 .more{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: auto;
+	margin-top: -23px;
+	margin-left: -94px;
+}
+
+.part3 .more a{
+	font-size: 40px;
+	color: white;
+	text-decoration: none;
+	border: 4px solid #c73232;
+	padding:  5px 10px;
+}
+
+@media screen and (max-width: 500px){
+	.index h1{
+		margin-left: 20px;
+	}
+
+	.index .menu{
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.part2 img{
+		width: 200px;
+		height: 266px;
+		margin-top: -133px;
+	}
+
+	.part2 .info{
+		margin-right: 80px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.part2{
+		height: auto;
+		padding-bottom: 50px;
+	}
+
+	.part2 img{
+		position: static;
+		margin: 50px 50px 0px !important;
+	}
 }
