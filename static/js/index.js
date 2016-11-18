@@ -1,26 +1,25 @@
 ;
 $(function() {
     function showLogo() {
+        var width = $(".index").width(),
+            height = $(".index").height(),
+            logoWidth, logoHeight, top, left;
+
         if (logoGif.complete != true)
             return;
 
-        var width = $(document.body).width(),
-            height = $(document.body).height() - 90,
-            logoWidth, logoHeight, top, left;
-
-        if (width / height >= logoGif.width / logoGif.height) {
-            logoWidth = height * logoGif.width / logoGif.height * SIZE;
+        if (width / height >= logo.width / logo.height) {
+            logoWidth = height * logo.width / logo.height * SIZE;
             logoHeight = height * SIZE;
         } else {
             logoWidth = width * SIZE;
             logoHeight = width * logo.height / logo.width * SIZE;
         }
-        top = (height - logoHeight) / 2 - 45;
+        top = (height - logoHeight) / 2;
         left = (width - logoWidth) / 2;
-        $([logoGif, logo]).css({
+        $(".logo").css({
             width: logoWidth,
             height: logoHeight,
-            position: "absolute",
             top: top < 0 ? 0 : top,
             left: left < 0 ? 0 : left,
         });
@@ -55,7 +54,9 @@ $(function() {
     logoGif.src = "../static/img/LOGO.gif";
     logo.src = "../static/img/logo.jpg";
 
-    $(".menuText").click(function(){
-        $("#leaders").slideToggle(300);
-    })
+    $(".menu").hover(function(){
+        $("#leaders").slideDown(300);
+    }, function(){
+        $("#leaders").slideUp(300);
+    });
 });
