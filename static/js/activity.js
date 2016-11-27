@@ -158,7 +158,7 @@ $(function() {
 
     $.ajax({
         url: "../static/json/activity.json",
-        type: "post",
+        type: "get",
         dataType: "json",
         success: function(data){
             var name = location.search.match(/\bactivity=([\w-]+)\b/);
